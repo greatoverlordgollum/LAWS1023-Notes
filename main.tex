@@ -1,0 +1,85 @@
+\documentclass[oneside, 12pt]{book}
+\usepackage{graphicx}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,raster,many}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[document]{ragged2e}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\usepackage{tablefootnote}
+\usepackage{enumitem}
+\usepackage[toc,titletoc,title]{appendix}
+\usepackage{longtable}
+% \usepackage[acronym, toc,section=chapter, acronym]{glossaries}
+\usepackage{CormorantGaramond}
+
+% \loadglsentries{glossary.tex}
+% \loadglsentries{acronyms.tex}
+
+% \makeglossaries
+
+\geometry{a4paper, portrait, margin=1in}
+
+\renewcommand{\chaptername}{Topic}
+
+\newtcolorbox{definition}[1]{fonttitle = \bfseries\scshape\centering\large, attach boxed title to top center= {yshift=-3mm, yshifttext=-1mm}, boxed title style ={size=small, colback=White}, coltitle = WildStrawberry, colback = White, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+% \newtcolorbox[auto counter, number within=section, list inside=cases]{casedetails}[1]{fonttitle = \bfseries\centering\large, coltitle = Black, colframe = Emerald!75, colback = Emerald!15, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+% \newtcolorbox[auto counter, number within=section, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries\centering\large, coltitle = Black, colframe = RubineRed!75, colback = RubineRed!15, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+\newtcolorbox{example}[1]{fonttitle = \bfseries\centering\large, coltitle = Black, colframe = Thistle!75, colback = Thistle!15, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+\newtcolorbox[auto counter, number within=subsection, list inside=cases]{casedetails}[1]{fonttitle = \bfseries, coltitle = Black, frame hidden, colback = White, colbacktitle=Gray!10, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+\newtcolorbox[auto counter, number within=subsection, list inside=conventions]{conventiondetails}[1]{fonttitle = \bfseries, coltitle = Black, frame hidden, colback = White, colbacktitle=Gray!10, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+\newtcolorbox[auto counter, number within=subsection, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries, coltitle = Black, frame hidden, colback = White, colbacktitle=Gray!10, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+\newcommand{\statute}[1]{\textcolor{RubineRed}{#1}}
+\newcommand{\case}[1]{\textcolor{Emerald}{#1}}
+
+\title{\Huge\bfseries\scshape LAWS1023: \\ Public International Law}
+\author{Aniket Sinha}
+\date{June 2025}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+
+\tableofcontents
+
+% \tcblistof[\chapter*]{cases}{List of Cases}
+
+% \tcblistof[\chapter*]{statute}{List of Statute}
+
+\flushleft
+
+\mainmatter
+
+\chapter{Development, Nature and Scope of Public International Law}
+\input{Topic 1.tex}
+
+\chapter{Sources of Public International Law}
+\input{Topic 2.tex}
+
+\chapter{The Law of Treaties}
+\input{Topic 3.tex}
+
+\chapter{International Law and Australian Law}
+\input{Topic 4.tex}
+
+\appendix
+\chapter{Scaffolds}
+\input{Scaffold.Tex}
+
+\end{document}
