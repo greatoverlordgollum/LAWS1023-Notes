@@ -40,11 +40,21 @@
 
 \newtcolorbox{example}[1]{fonttitle = \bfseries\centering\large, coltitle = Black, colframe = Thistle!75, colback = Thistle!15, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
 
-\newtcolorbox[auto counter, number within=subsection, list inside=cases]{casedetails}[1]{fonttitle = \bfseries, coltitle = Black, frame hidden, colback = White, colbacktitle=Gray!10, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+\newtcolorbox[auto counter, number within=subsection, list inside=cases]{casedetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Gray!20, colframe=Gray!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}% `frame hidden' is removed
 
-\newtcolorbox[auto counter, number within=subsection, list inside=conventions]{conventiondetails}[1]{fonttitle = \bfseries, coltitle = Black, frame hidden, colback = White, colbacktitle=Gray!10, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+\newtcolorbox[auto counter, number within=subsection, list inside=conventions]{conventiondetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Gray!20, colframe=Gray!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
 
-\newtcolorbox[auto counter, number within=subsection, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries, coltitle = Black, frame hidden, colback = White, colbacktitle=Gray!10, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+\newtcolorbox[auto counter, number within=subsection, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Gray!20, colframe=Gray!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
+
+% Eventually update case details to include this pattern:
+% \begin{casedetails}{s}
+%     \tcbsubtitle{Facts}
+%     sss
+%     \tcbsubtitle{Issue}
+%     s
+%     \tcbsubtitle{Decision}
+%     s
+% \end{casedetails}
 
 \newcommand{\statute}[1]{\textcolor{RubineRed}{#1}}
 \newcommand{\case}[1]{\textcolor{Emerald}{#1}}
