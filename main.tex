@@ -16,7 +16,9 @@
 \usepackage{tablefootnote}
 \usepackage{enumitem}
 \usepackage[toc,titletoc,title]{appendix}
-\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
 % \usepackage[acronym, toc,section=chapter, acronym]{glossaries}
 \usepackage{CormorantGaramond}
 
@@ -46,6 +48,9 @@
 
 \newcommand{\statute}[1]{\textcolor{RubineRed}{#1}}
 \newcommand{\case}[1]{\textcolor{Emerald}{#1}}
+\newcommand{\convention}[1]{\textcolor{Blue}{#1}}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \title{\Huge\bfseries\scshape LAWS1023: \\ Public International Law}
 \author{Aniket Sinha}
