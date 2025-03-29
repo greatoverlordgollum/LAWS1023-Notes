@@ -46,6 +46,8 @@
 
 \newtcolorbox[auto counter, number within=subsection, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Gray!20, colframe=Gray!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
 
+\newtcolorbox[auto counter, number within=subsection, list inside=statute]{tutorialquestion}{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Gray!20, colframe=Gray!20, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
+
 % Eventually update case details to include this pattern:
 % \begin{casedetails}{s}
 %     \tcbsubtitle{Facts}
@@ -97,5 +99,8 @@
 \appendix
 \chapter{Scaffolds}
 \input{Scaffold.Tex}
+
+\chapter{Tutorial Problems}
+\input{Tutorials.tex}
 
 \end{document}
