@@ -19,13 +19,13 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{multirow}
-% \usepackage[acronym, toc,section=chapter, acronym]{glossaries}
+\usepackage[acronym, toc,section=chapter, acronym]{glossaries}
 \usepackage{CormorantGaramond}
 
-% \loadglsentries{glossary.tex}
+\loadglsentries{glossary.tex}
 % \loadglsentries{acronyms.tex}
 
-% \makeglossaries
+\makeglossaries
 
 \geometry{a4paper, portrait, margin=1in}
 
@@ -103,5 +103,9 @@
 
 \chapter{Tutorial Problems}
 \input{Tutorials.tex}
+
+\setglossarystyle{listgroup}
+\glsaddall
+\printglossary[type=main, nonumberlist, title={Glossary}]
 
 \end{document}
