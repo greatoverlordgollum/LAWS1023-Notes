@@ -39,25 +39,13 @@
 
 % \newtcolorbox[auto counter, number within=section, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries\centering\large, coltitle = Black, colframe = RubineRed!75, colback = RubineRed!15, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
 
- 
-
-\newtcolorbox[auto counter, number within=subsection, list inside=cases]{casedetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Emerald!20, colframe=Emerald!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}% `frame hidden' is removed
+ \newtcolorbox[auto counter, number within=subsection, list inside=cases]{casedetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Emerald!20, colframe=Emerald!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}% `frame hidden' is removed
 
 \newtcolorbox[auto counter, number within=subsection, list inside=conventions]{conventiondetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Blue!20, colframe=Blue!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
 
 \newtcolorbox[auto counter, number within=subsection, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=RubineRed!20, colframe=RubineRed!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
 
-\newtcolorbox[auto counter, number within=subsection, list inside=statute]{tutorialquestion}{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Gray!20, colframe=Gray!20, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
-
-% Eventually update case details to include this pattern:
-% \begin{casedetails}{s}
-%     \tcbsubtitle{Facts}
-%     sss
-%     \tcbsubtitle{Issue}
-%     s
-%     \tcbsubtitle{Decision}
-%     s
-% \end{casedetails}
+\newtcolorbox[auto counter, number within=subsection, list inside=tutorial]{tutorialquestion}{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Gray!20, colframe=Gray!20, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
 
 \newcommand{\statute}[1]{\textcolor{RubineRed}{#1}}
 \newcommand{\case}[1]{\textcolor{Emerald}{#1}}
@@ -78,9 +66,14 @@
 
 \tableofcontents
 
-% \tcblistof[\chapter*]{cases}{List of Cases}
+% Increase the spacing between the number and the entry name in the tcblistof lists
+\renewcommand{\numberline}[1]{#1\hspace{1em}} % Adjust '1em' as needed
 
-% \tcblistof[\chapter*]{statute}{List of Statute}
+\tcblistof[\chapter*]{cases}{List of Cases}
+
+\tcblistof[\chapter*]{statute}{List of Statute}
+
+\tcblistof[\chapter*]{conventions}{List of Conventions}
 
 \flushleft
 
