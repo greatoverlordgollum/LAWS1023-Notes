@@ -1,4 +1,4 @@
-\documentclass[oneside, 12pt]{book}
+\documentclass[12pt]{book}
 \usepackage{graphicx}
 \usepackage[dvipsnames, table]{xcolor}
 \usepackage[hidelinks]{hyperref}
@@ -19,12 +19,14 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{multirow}
-\usepackage[acronym, toc,section=chapter, acronym]{glossaries}
+\usepackage[toc,section=chapter, acronym]{glossaries-extra}
 \usepackage{wasysym}
 \usepackage{CormorantGaramond}
 
 \loadglsentries{glossary.tex}
 % \loadglsentries{acronyms.tex}
+
+\input{Case Summaries.tex}
 
 \makeglossaries
 
@@ -126,6 +128,9 @@
 \input{Tutorials.tex}
 
 \setglossarystyle{listgroup}
+\glsaddall
+\printglossary[type=summaries,nonumberlist, title={Case Summaries}]
+
 \glsaddall
 \printglossary[type=main, nonumberlist, title={Glossary}]
 
